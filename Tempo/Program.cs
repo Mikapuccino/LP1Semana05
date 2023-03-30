@@ -20,8 +20,14 @@ namespace Tempo
             crono1.Stop();
             crono2.Stop();
 
-            Console.WriteLine(crono1.Elapsed);
-            Console.WriteLine(crono2.Elapsed);
+            TimeSpan ts1 = crono1.Elapsed;
+            TimeSpan ts2 = crono2.Elapsed;
+
+            string ts1Sec = ts1.ToString("ss\\.ff");
+            string ts2Sec = ts2.ToString("ss\\.ff");
+
+            Console.WriteLine(ts1Sec);
+            Console.WriteLine(ts2Sec);
         }
     }
 }
